@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string originalString;
+    std::string insertString;
+    std::size_t position;
+
+    std::cout << "Enter the original string: ";
+    std::getline(std::cin, originalString);
+
+    std::cout << "Enter the string to insert: ";
+    std::getline(std::cin, insertString);
+
+    std::cout << "Enter the position to insert at (0-indexed): ";
+    std::cin >> position;
+
+    originalString.insert(position, insertString);
+
+    std::cout << "Modified string: " << originalString << std::endl;
+
+    return 0;
+}
