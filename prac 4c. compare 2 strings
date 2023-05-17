@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <string.h>
+
+int main()
+{
+    const char *str_inp1 = "String Match";
+    const char *str_inp2 = "String Unmatch";
+
+    std::cout << "String 1: " << str_inp1 << std::endl;
+    std::cout << "String 2: " << str_inp2 << std::endl;
+
+    if (strcmp(str_inp1, str_inp2) == 0)
+        std::cout << "\nBoth the input strings are equal." << std::endl;
+    else
+        std::cout << "\nThe input strings are not equal." << std::endl;
+}
