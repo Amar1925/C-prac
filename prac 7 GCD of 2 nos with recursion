@@ -1,0 +1,25 @@
+#include <iostream>
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a; // Base case: When b becomes 0, a is the GCD
+    } else {
+        return gcd(b, a % b); // Recursive call with a % b as new a and b as new b
+    }
+}
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter the first number: ";
+    std::cin >> num1;
+
+    std::cout << "Enter the second number: ";
+    std::cin >> num2;
+
+    int result = gcd(num1, num2);
+
+    std::cout << "GCD: " << result << std::endl;
+
+    return 0;
+}
